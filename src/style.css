@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&display=swap");
+:root {
+   --orange: hsl(26, 100%, 55%);
+   --Pale_orange: hsl(25, 100%, 94%);
+   --Very_dark_blue: hsl(220, 13%, 13%);
+   --Dark_grayish_blue: hsl(219, 9%, 45%);
+   --Grayish_blue: hsl(220, 14%, 75%);
+   --Light_grayish_blue: hsl(223, 64%, 98%);
+   --White: hsl(0, 0%, 100%);
+   --Black: hsl(0, 0%, 0%); /*(with 75% opacity for lightbox background)*/
+}
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Inter", sans-serif;
+   list-style: none;
+}
+
+body {
+   min-height: 100vh;
+}
+
+/* Header */
+header {
+   display: flex;
+   justify-content: space-between;
+   margin: 50px 190px 50px;
+}
+header .left {
+   display: flex;
+   align-items: center;
+   gap: 40px;
+}
+.left img {
+   width: 140px;
+   height: 19px;
+}
+.left ul {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   color: var(--Dark_grayish_blue);
+}
+ul li{
+   cursor: pointer;
+}
+.right {
+   display: flex;
+   align-items: center;
+   gap: 30px;
+}
+.right img:last-child {
+   width: 50px;
+}
+.line {
+   margin: 50px 190px 50px;
+   width: 1150px;
+   height: 1px;
+   background-color: var(--Grayish_blue);
+}
+
+/* Main */
+main {
+   display: flex;
+   margin: 50px 250px 50px;
+   gap: 80px;
+}
+.product-image .box-image {
+   margin-bottom: 20px;
+   /* to watch */
+   display: flex;
+   overflow: hidden;
+   width: 400px;
+   /* to watch */
+}
+.product-image .box-image img {
+   border-radius: 15px;
+   width: 400px;
+}
+.product-image .thumbnail-image {
+   display: flex;
+   gap: 23px;
+}
+.product-image .thumbnail-image img {
+   width: 80px;
+   border-radius: 10px;
+}
+
+.product-description {
+   display: block;
+   margin: 50px;
+}
+.product-description .name_product {
+   color: var(--Dark_grayish_blue);
+   margin-bottom: 10px;
+   font-weight: 600;
+}
+.product-description h1 {
+   color: var(--Very_dark_blue);
+   margin-bottom: 30px;
+   font-size: 36px;
+}
+.product-description .sneaker_description {
+   color: var(--Dark_grayish_blue);
+   font-size: 14px;
+   margin-bottom: 20px;
+}
+.product-description .sneaker_price {
+   color: var(--Black);
+   font-size: 20px;
+   font-weight: 700;
+   margin-bottom: 10px;
+}
+.product-description .sneaker_price small {
+   background-color: var(--Black);
+   color: var(--White);
+   padding: 5px;
+   font-size: 11px;
+   border-radius: 5px;
+   margin-left: 10px;
+}
+.product-description .regular_price {
+   color: var(--Dark_grayish_blue);
+   font-size: 12px;
+   text-decoration: line-through;
+   font-weight: 600;
+   margin-bottom: 20px;
+}
+form {
+   display: flex;
+   align-items: center;
+}
+form input {
+   width: 50px;
+   height: 40px;
+   background-color: var(--Light_grayish_blue);
+   border-radius: 5px;
+   border: none;
+   color: var(--orange);
+   font-size: 20px;
+   font-weight: 700;
+   cursor: pointer;
+}
+form p {
+   padding: 10px;
+   background-color: var(--Light_grayish_blue);
+   border: none;
+   font-size: 14px;
+   font-weight: 600;
+}
+form button {
+   cursor: pointer;
+   background-color: var(--orange);
+   border-radius: 5px;
+   border: none;
+   width: 200px;
+   height: 40px;
+   text-align: center;
+   color: var(--Black);
+   font-weight: 600;
+}
+form button i {
+   width: 15px;
+   margin-right: 10px;
+}
+
+/* Footer */
+/* .attribution {
+            font-size: 11px;
+            text-align: center;
+         }
+         .attribution a {
+            color: hsl(228, 45%, 44%);
+         } */
