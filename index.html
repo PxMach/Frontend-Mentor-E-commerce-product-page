@@ -33,12 +33,18 @@
             </nav>
          </div>
          <div class="right">
-            <img src="images/icon-cart.svg" alt="image cart" />
+            <img src="images/icon-cart.svg" id="icon-cart" alt="image cart" />
             <img src="images/image-avatar.png" alt="image avatar" />
          </div>
-      </header>
 
-      <div class="line"></div>
+         <div class="cart-container">
+            <p class="box-title">Cart</p>
+            <hr />
+            <div class="cart-content">
+               <!-- <p>Your cart is empty</p> -->
+            </div>
+         </div>
+      </header>
 
       <main>
          <article class="product-image">
@@ -85,9 +91,9 @@
             <p class="regular_price">$250.00</p>
 
             <form>
-               <input type="button" value="-" />
-               <p>0</p>
-               <input type="button" value="+" />
+               <input type="button" value="-" class="minus" />
+               <p class="num">0</p>
+               <input type="button" value="+" class="plus" />
                <button type="submit">
                   <i class="fa-solid fa-cart-shopping"></i>
                   Add to cart
@@ -96,7 +102,7 @@
          </article>
       </main>
 
-        <!-- <footer>
+      <!-- <footer>
          <div class="attribution">
             Challenge by
             <a
