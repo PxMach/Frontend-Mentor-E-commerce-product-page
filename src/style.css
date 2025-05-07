@@ -194,6 +194,7 @@ form button {
    text-align: center;
    color: var(--Black);
    font-weight: 600;
+   margin-left: 15px;
 }
 form button:hover {
    background-color: var(--Pale_orange);
