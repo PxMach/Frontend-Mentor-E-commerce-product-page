@@ -33,15 +33,37 @@
             </nav>
          </div>
          <div class="right">
-            <img src="images/icon-cart.svg" id="icon-cart" alt="image cart" />
+            <div class="cart-wrapper">
+               <span class="cart-count">0</span>
+               <img
+                  src="images/icon-cart.svg"
+                  id="icon-cart"
+                  alt="image cart"
+               />
+            </div>
             <img src="images/image-avatar.png" alt="image avatar" />
          </div>
 
          <div class="cart-container">
             <p class="box-title">Cart</p>
             <hr />
+            <div class="cart-empty">
+               <p>Your cart is empty</p>
+            </div>
             <div class="cart-content">
-               <!-- <p>Your cart is empty</p> -->
+               <div class="cart-product">
+                  <img
+                     src="images/image-product-1-thumbnail.jpg"
+                     alt="product 1 thumbnail"
+                  />
+                  <p>
+                     Fall Limited Edition Sneakers <br />
+                     $125.00 x <span class="num">0</span>
+                     <span class="addition"></span>
+                  </p>
+                  <i class="fa-solid fa-trash-can"></i>
+               </div>
+               <button>Checkout</button>
             </div>
          </div>
       </header>
@@ -80,22 +102,25 @@
             <h1>Fall Limited Edition Sneakers</h1>
             <p class="sneaker_description">
                These low-profile sneakers are your perfect casual wear
-               companion. Featuring a durable rubber outer sole, they’ll
+               companion. Featuring a durable rubber outer sole, they'll
                withstand everything the weather can offer.
             </p>
             <p class="sneaker_price">
                $125.00
                <small>50%</small>
             </p>
-            <!-- after css or before css -->
             <p class="regular_price">$250.00</p>
 
             <form>
                <input type="button" value="-" class="minus" />
                <p class="num">0</p>
                <input type="button" value="+" class="plus" />
-               <button type="submit">
-                  <i class="fa-solid fa-cart-shopping"></i>
+               <button type="submit" id="add-cart">
+                  <img
+                     src="images/icon-cart.svg"
+                     class="cart-btn"
+                     alt="image cart"
+                  />
                   Add to cart
                </button>
             </form>
