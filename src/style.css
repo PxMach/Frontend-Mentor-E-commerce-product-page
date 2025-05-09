@@ -129,6 +129,7 @@ ul li:hover {
 }
 .cart-product i {
    color: rgb(174, 171, 171);
+   cursor: pointer;
 }
 .cart-content button {
    cursor: pointer;
@@ -155,17 +156,20 @@ main {
 }
 .product-image .box-image {
    margin-bottom: 20px;
-   /* to watch */
    display: flex;
    overflow: hidden;
    width: 400px;
-   /* to watch */
+   position: relative;
 }
 .product-image .box-image img {
    border-radius: 15px;
    width: 400px;
+   display: none;
 }
-/* FOCUS IMAGE DON'T WORK */
+.product-image .box-image img:first-child {
+   display: block;
+}
+
 .product-image .thumbnail-image {
    display: flex;
    gap: 23px;
@@ -174,9 +178,12 @@ main {
    cursor: pointer;
    width: 80px;
    border-radius: 10px;
+   opacity: 0.7;
+   transition: opacity 0.3s ease;
 }
-.product-image .thumbnail-image img:focus {
-   border: 2px solid var(--orange);
+.product-image .thumbnail-image img.active {
+   border: 4px solid var(--orange);
+   opacity: 0.5;
 }
 
 .product-description {
