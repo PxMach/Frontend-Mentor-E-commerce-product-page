@@ -15,6 +15,19 @@ const addCart = document.getElementById("add-cart");
 const mainImages = document.querySelectorAll(".box-image img");
 const thumbnails = document.querySelectorAll(".thumbnail-image img");
 
+// Selecting lightbox elements
+const lightbox = document.querySelector(".lightbox");
+const closeLightbox = document.querySelector(".close-lightbox");
+const lightboxImages = document.querySelectorAll(".lightbox-images img");
+const lightboxThumbnails = document.querySelectorAll(
+   ".lightbox-thumbnails img"
+);
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+
+let count = 0;
+let add = 0;
+
 // image change management
 thumbnails.forEach((thumbnail, index) => {
    thumbnail.addEventListener("click", function () {
@@ -33,8 +46,59 @@ thumbnails.forEach((thumbnail, index) => {
    });
 });
 
-let count = 0;
-let add = 0;
+// Open the lightbox by clicking on the main image
+mainImages.forEach((img) => {
+   img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      // dislay the same image in lightbox
+      const currentIndex = Array.from(mainImages).indexOf(img);
+      updateLightboxImage(currentIndex);
+   });
+});
+
+// close the lightbox
+closeLightbox.addEventListener("click", () => {
+   lightbox.classList.remove("active");
+});
+
+// nav in the lightbox
+let currentImageIndex = 0;
+
+function updateLightboxImage(index) {
+   lightboxImages.forEach((img) => (img.style.display = "none"));
+   lightboxImages[index].style.display = "block";
+
+   lightboxThumbnails.forEach((thumb) => thumb.classList.remove("active"));
+   lightboxThumbnails[index].classList.add("active");
+
+   currentImageIndex = index;
+}
+
+// Thumbnail management in the lightbox
+
+lightboxThumbnails.forEach((thumbnail, index) => {
+   thumbnail.addEventListener("click", () => {
+      updateLightboxImage(index);
+   });
+});
+// Boutons précédent/suivant
+prevBtn.addEventListener("click", () => {
+   currentImageIndex =
+      (currentImageIndex - 1 + lightboxImages.length) % lightboxImages.length;
+   updateLightboxImage(currentImageIndex);
+});
+
+nextBtn.addEventListener("click", () => {
+   currentImageIndex = (currentImageIndex + 1) % lightboxImages.length;
+   updateLightboxImage(currentImageIndex);
+});
+
+// Fermer la lightbox avec la touche Escape
+document.addEventListener("keydown", (e) => {
+   if (e.key === "Escape" && lightbox.classList.contains("active")) {
+      lightbox.classList.remove("active");
+   }
+});
 
 // Click the button + or - for the number of product
 plus.addEventListener("click", function () {
