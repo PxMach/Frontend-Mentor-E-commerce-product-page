@@ -105,24 +105,30 @@
                companion. Featuring a durable rubber outer sole, they'll
                withstand everything the weather can offer.
             </p>
-            <p class="sneaker_price">
-               $125.00
-               <small>50%</small>
-            </p>
-            <p class="regular_price">$250.00</p>
+            <div class="price">
+               <p class="sneaker_price">
+                  $125.00
+                  <small>50%</small>
+               </p>
+               <p class="regular_price">$250.00</p>
+            </div>
 
             <form>
-               <input type="button" value="-" class="minus" />
-               <p class="num">0</p>
-               <input type="button" value="+" class="plus" />
-               <button type="submit" id="add-cart">
-                  <img
-                     src="images/icon-cart.svg"
-                     class="cart-btn"
-                     alt="image cart"
-                  />
-                  Add to cart
-               </button>
+               <div class="buttons">
+                  <input type="button" value="-" class="minus" />
+                  <p class="num">0</p>
+                  <input type="button" value="+" class="plus" />
+               </div>
+               <div class="btnadd">
+                  <button type="submit" id="add-cart">
+                     <img
+                        src="images/icon-cart.svg"
+                        class="cart-btn"
+                        alt="image cart"
+                     />
+                     Add to cart
+                  </button>
+               </div>
             </form>
          </article>
       </main>
@@ -144,7 +150,7 @@
             <button class="close-lightbox">&times;</button>
             <button class="prev-btn">&lt;</button>
             <button class="next-btn">&gt;</button>
-            
+
             <div class="lightbox-images">
                <img src="images/image-product-1.jpg" alt=" product 1" />
                <img src="images/image-product-2.jpg" alt="product 2" />
