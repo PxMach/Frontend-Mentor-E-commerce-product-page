@@ -393,10 +393,10 @@ form button .cart-btn {
       justify-content: space-between;
       margin: 1px 10px;
       height: 110px;
-      border-bottom: 1px solid var(--Dark_grayish_blue);
+      border-bottom: 0;
    }
-   /* 
-   header .left {
+
+   /* header .left {
       display: flex;
       align-items: center;
       gap: 40px;
@@ -517,15 +517,19 @@ form button .cart-btn {
       font-weight: 600;
    } */
 
+  
+
    main {
       display: block;
+      position: absolute;
+      bottom: -270px;
       margin: 0;
       gap: 80px;
       width: 375px;
    }
    .product-image .box-image {
       margin-bottom: 20px;
-      display: flex;
+      display: none;
       overflow: hidden;
       width: 375px;
       position: relative;
@@ -536,34 +540,18 @@ form button .cart-btn {
       display: none;
       cursor: pointer;
    }
-   /* .product-image .box-image img:first-child {
-      display: block;
-   } */
 
    .product-image .thumbnail-image {
       display: none;
       gap: 23px;
    }
-   /* .product-image .thumbnail-image img {
-      cursor: pointer;
-      width: 80px;
-      border-radius: 10px;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
-   }
-   .product-image .thumbnail-image img.active {
-      border: 4px solid var(--orange);
-      opacity: 0.5;
-   } */
 
    .product-description {
       display: block;
       margin: 20px;
    }
    .product-description .name_product {
-      color: var(--Dark_grayish_blue);
-      margin-bottom: 10px;
-      font-weight: 600;
+      font-size: 14px;
    }
    .product-description h1 {
       color: var(--Very_dark_blue);
@@ -593,25 +581,8 @@ form button .cart-btn {
    }
    .buttons input {
       width: 100%;
-      /* height: 40px;
-      background-color: var(--Light_grayish_blue);
-      border-radius: 0px;
-      border: none;
-      color: var(--orange);
-      font-size: 20px;
-      font-weight: 700;
-      cursor: pointer; */
    }
-   /* form input:hover {
-      color: var(--Pale_orange);
-   } */
-   /* form p {
-      padding: 10px;
-      background-color: var(--Light_grayish_blue);
-      border: none;
-      font-size: 14px;
-      font-weight: 600;
-   } */
+
    .btnadd {
       width: 100%;
    }
@@ -619,5 +590,84 @@ form button .cart-btn {
       cursor: pointer;
       width: 100%;
       margin-left: 0px;
+   }
+   /* lightbox */
+   .lightbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position:relative;
+      top: 0;
+      left: 0;
+      width: 375px;
+      height: 375px;
+      background-color: rgba(0, 0, 0, 0);
+      z-index: 1000;
+   }
+   /* .lightbox.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   } */
+   /* .lightbox-content {
+      position: relative;
+      width: 500px;
+   }
+   .lightbox-images {
+      position: relative;
+      margin-bottom: 20px;
+   } */
+   .lightbox-images img {
+      width: 100%;
+      border-radius: 0px;
+      display: none;
+   }
+   .lightbox-images img:first-child {
+      display: block;
+   }
+
+   .lightbox-thumbnails {
+      display: none;
+      justify-content: center;
+      gap: 20px;
+   }
+   /* .lightbox-thumbnails img {
+      width: 80px;
+      border-radius: 10px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+   }
+   .lightbox-thumbnails img:hover {
+      opacity: 1;
+   }
+   .lightbox-thumbnails img.active {
+      border: 4px solid var(--orange);
+      opacity: 0.5;
+   }
+
+   .close-lightbox {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: none;
+      border: none;
+      color: var(--White);
+      font-size: 30px;
+      cursor: pointer;
+   }
+   .close-lightbox:hover {
+      color: var(--orange);
+   } */
+  
+   .prev-btn {
+      left: 10px;
+   }
+   .next-btn {
+      right: 10px;
+   }
+   .prev-btn:hover,
+   .next-btn:hover {
+      color: var(--orange);
    }
 }
