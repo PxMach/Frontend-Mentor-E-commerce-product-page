@@ -25,6 +25,11 @@ const lightboxThumbnails = document.querySelectorAll(
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 
+// Nav media querie
+const nav = document.querySelector("nav");
+const faBars = document.querySelector(".fa-bars");
+const faXmark = document.querySelector(".fa-xmark");
+
 let count = 0;
 let add = 0;
 
@@ -154,4 +159,13 @@ addCart.addEventListener("click", function (e) {
       cartContent.style.display = "block";
       cartEmpty.style.display = "none";
    }
+});
+
+//Nav
+faBars.addEventListener("click", () => {
+   nav.style.display = "flex";
+});
+
+faXmark.addEventListener("click", () => {
+   nav.style.display = "none";
 });
