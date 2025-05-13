@@ -34,9 +34,15 @@ header .left {
    align-items: center;
    gap: 40px;
 }
+.left .fa-bars {
+   display: none;
+}
 .left img {
    width: 140px;
    height: 19px;
+}
+nav div .fa-xmark {
+   display: none;
 }
 .left ul {
    display: flex;
@@ -379,7 +385,7 @@ i {
    display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
    body {
       height: 900px;
    }
@@ -421,6 +427,12 @@ i {
    nav i.fa-xmark {
       margin: 20px;
       height: 18px;
+   }
+   .left .fa-bars {
+      display: initial;
+   }
+   nav div .fa-xmark {
+      display: block;
    }
    .left ul {
       display: flex;
@@ -533,7 +545,7 @@ i {
    main {
       display: block;
       position: absolute;
-      bottom: -270px;
+      bottom: -200px;
       margin: 0;
       gap: 80px;
       width: 375px;
@@ -645,3 +657,6 @@ i {
       right: 10px;
    }
 }
+
+/* button + et - la taille ne march pas sur phone */
+/* lorsque je clique le <p> count dois se remettre a zéro */
