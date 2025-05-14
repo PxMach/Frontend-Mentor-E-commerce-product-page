@@ -385,7 +385,7 @@ i {
    display: none;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 375px) {
    body {
       height: 900px;
    }
